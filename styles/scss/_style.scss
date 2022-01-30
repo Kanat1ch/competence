@@ -218,6 +218,19 @@ h2.title {
   }
 }
 
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid $gray;
+  font-size: 16px;
+
+  &--fill {
+    border: none;
+    background-color: $purple;
+    color: #fff;
+  }
+}
+
 .footer {
   padding: 10px 0;
   text-align: center;

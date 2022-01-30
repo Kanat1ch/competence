@@ -1,0 +1,12 @@
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid $card-border-color;
+  font-size: 16px;
+
+  &--fill {
+    border: none;
+    background-color: $purple;
+    color: #fff;
+  }
+}

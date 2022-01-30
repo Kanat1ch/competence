@@ -12,6 +12,7 @@ body, input, textarea, button {
 }
 
 main {
+  min-height: calc(100vh - 120px);
   padding: 20px 0 50px;
 }
 
@@ -54,6 +55,10 @@ h2.title {
   font-weight: 500;
 }
 
+ul {
+  margin-left: 20px;
+}
+
 .link {
   text-decoration: none;
   color: $lightpurple;
@@ -61,6 +66,10 @@ h2.title {
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
   }
 }
 
@@ -170,80 +179,8 @@ h2.title {
     font-size: 18px;
     cursor: pointer;
   }
-}
 
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-
-  &__image {
-    width: 50px;
-    height: 50px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__text {
-    font-size: 22px;
-    font-weight: 500;
-    margin-left: 15px;
-    color: $lightpurple;
-  }
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
-  border: 2px solid $lightpurple;
-  color: $lightpurple;
-  outline: none;
-  background-color: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-
-  &:hover {
-    background-color: $lightpurple;
-    color: $white;
-  }
-
-  &-white {
-    border-color: $white;
-    color: $white;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-  }
-}
-
-.card {
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid $card-border-color;
-  font-size: 16px;
-
-  &--fill {
-    border: none;
-    background-color: $purple;
-    color: #fff;
-  }
-}
-
-.footer {
-  padding: 10px 0;
-  text-align: center;
-  color: $gray;
-}
-
-@media screen and (max-width: 1200px) {
-  .header {
+  @media screen and (max-width: 1200px) {
     &__container {
       .menu-btn {
         display: block;
@@ -309,6 +246,82 @@ h2.title {
       padding: 5px;
     }
   }
+
+  @media screen and (max-width: 576px) {
+    &__content {
+      max-width: 100%;
+      width: 100%;
+      transform: translateX(101%);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &__image {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 15px;
+    color: $lightpurple;
+  }
+
+  @media screen and (max-width: 576px) {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  border: 2px solid $lightpurple;
+  color: $lightpurple;
+  outline: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: $lightpurple;
+    color: $white;
+  }
+
+  &-white {
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+.footer {
+  padding: 10px 0;
+  text-align: center;
+  color: $gray;
 }
 
 .loading * {
@@ -327,32 +340,5 @@ h2.title {
 
   &.active {
     display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .link {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .logo {
-    &__text {
-      display: none;
-    }
-  }
-  
-  .header {
-    &__content {
-      max-width: 100%;
-      width: 100%;
-      transform: translateX(101%);
-    }
   }
 }

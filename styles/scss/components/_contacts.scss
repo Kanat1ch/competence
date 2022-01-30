@@ -1,0 +1,56 @@
+@import 'inline-info';
+
+.contacts {
+  display: flex;
+
+  &__details {
+    width: 45%;
+  }
+
+  &__map {
+    width: 55%;
+
+    iframe {
+      width: 100%;
+      min-height: 350px;
+      border-radius: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__detail {
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  
+    &__details {
+      width: 100%;
+    }
+  
+    &__map {
+      width: 100%;
+      margin-top: 20px;
+  
+      iframe {
+        width: 100%;
+      }
+    }
+  
+    &__title {
+      margin-bottom: 20px;
+    }
+  
+    &__detail {
+      margin-bottom: 10px;
+    }
+  }
+}

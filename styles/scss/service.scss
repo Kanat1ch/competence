@@ -1,0 +1,21 @@
+@import './layout/layout';
+@import './components/submenu';
+@import './components/banner';
+@import './components/card';
+@import './components/spoiler';
+
+#banner .banner {
+  &__content {
+    background-color: $lightblue;
+  }
+}
+
+.documents {
+  margin-top: 60px;
+
+  &__spoiler {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

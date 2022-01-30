@@ -1,4 +1,5 @@
-@import 'style';
+@import './layout/layout';
+@import './components/card';
 
 .intro {
   position: relative;
@@ -38,6 +39,22 @@
   &__subtitle {
     color: $gray;
   }
+
+  @media screen and (max-width: 768px) {
+    position: static;
+
+    &__image {
+      position: static;
+      height: 200px;
+      width: 100%;
+    }
+
+    &__content {
+      margin-top: 20px;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
 }
 
 .experience {
@@ -55,6 +72,16 @@
 
   &__card {
     width: 48%;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__card {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -93,36 +120,8 @@
   &__card {
     margin-top: 20px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .intro {
-    position: static;
-
-    &__image {
-      position: static;
-      height: 200px;
-      width: 100%;
-    }
-
-    &__content {
-      margin-top: 20px;
-      margin-left: 0;
-      width: 100%;
-    }
-  }
-
-  .experience {
-    &__card {
-      width: 100%;
-
-      &:not(:last-child) {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  .main-info {
+  @media screen and (max-width: 768px) {
     position: static;
 
     &__image {

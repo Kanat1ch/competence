@@ -1,59 +1,16 @@
-@import 'style';
+@import './layout/layout';
+@import './components/contacts';
+@import './components/banner';
 
-.banner {
-  position: relative;
-  width: 100%;
-  border-radius: 15px;
-  display: flex;  
-
-  &__content {
-    padding: 65px;
-    width: 60%;
-    color: #fff;
-    border-radius: 15px;
-  }
-
-  &__description {
-    font-size: 18px;
-    margin: 20px 0;
-  }
-
-  &__image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: calc(40% + 25px);
-    z-index: -1;
-    border-radius: 15px;
-    background-color: #eee;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-  }
-}
-
-.banner-left .banner {
-  &__image {
-    right: 0;
-  }
-
+#banner1 .banner {
   &__content {
     background-color: $purple;
   }
 }
 
-.banner-right .banner {
-  &__image {
-    left: 0;
-  }
-
+#banner2 .banner {
   &__content {
     background-color: $blue;
-    margin-left: auto;
   }
 }
 
@@ -76,6 +33,10 @@
   &__card {
     width: 48%;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -108,6 +69,10 @@
     margin: 15px 0;
     text-decoration: none;
     color: $black;
+
+    @media screen and (max-width: 992px) {
+      font-size: 22px;
+    }
   }
 
   &__description {
@@ -125,162 +90,8 @@
       margin-right: 20px;
     }
   }
-}
 
-.contacts {
-  margin-top: 60px;
-  display: flex;
-
-  &__details {
-    width: 45%;
-  }
-
-  &__map {
-    width: 55%;
-
-    iframe {
-      width: 100%;
-      min-height: 350px;
-      border-radius: 15px;
-    }
-  }
-
-  &__title {
-    margin-bottom: 50px;
-  }
-
-  &__detail {
-    margin-bottom: 25px;
-  }
-
-  &__btn {
-    text-decoration: none;
-  }
-}
-
-.inline-info {
-  display: flex;
-
-  &__label {
-    color: $gray;
-    min-width: 120px;
-  }
-
-  &__text {
-    font-weight: 500;
-    color: $black;
-    text-decoration: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .banner {  
-    &__content {
-      padding: 30px;
-      width: 100%;
-      margin-top: 430px;
-    }
-
-    &__title {
-      font-size: 24px;
-    }
-  
-    &__image {
-      top: 0;
-      left: 0;
-      bottom: auto;
-      height: 460px;
-      width: 100%;
-    }
-  }
-
-  .service-card {
-    &__title {
-      font-size: 22px;
-    }
-  }
-
-  .contacts {
-    flex-direction: column;
-  
-    &__details {
-      width: 100%;
-    }
-  
-    &__map {
-      width: 100%;
-      margin-top: 20px;
-  
-      iframe {
-        width: 100%;
-      }
-    }
-  
-    &__title {
-      margin-bottom: 20px;
-    }
-  
-    &__detail {
-      margin-bottom: 10px;
-    }
-  }
-
-  .show-map-btn {
-    display: none;
-  }
-  
-  .inline-info {
-    flex-direction: column;
-    margin-bottom: 20px;
-
-    &__label {
-      margin-bottom: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    padding-top: 0;
-  }
-
-  .banner__container {
-    padding: 0 !important;
-    max-width: 100% !important;
-  }
-
-  .banner {  
-    &__content {
-      margin-top: 300px;
-    }
-  
-    &__image {
-      height: 330px;
-    }
-  }
-
-  .banner-left .banner {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-
-    &__image {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-
-      img {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-    }
-  }
-
-  .services {
-    &__card {
-      width: 100%;
-    }
-  }
-
-  .service-card {
+  @media screen and (max-width: 768px) {  
     &__image {
       height: 300px;
     }
@@ -291,27 +102,20 @@
       -webkit-box-orient: vertical;
     }
   }
-}
 
-@media screen and (max-width: 576px) {
-  .banner {  
-    &__content {
-      margin-top: 230px;
-    }
-  
-    &__image {
-      height: 260px;
-    }
-
-    &__btn {
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .service-card {
+  @media screen and (max-width: 576px) {
     &__image {
       height: 250px;
     }
+  }
+}
+
+.contacts {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 992px) {
+  .show-map-btn {
+    display: none;
   }
 }

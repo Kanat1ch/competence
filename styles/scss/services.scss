@@ -1,5 +1,7 @@
-@import 'style';
-@import 'submenu';
+@import './layout/layout';
+@import './components/submenu';
+@import './components/card';
+@import './components/step';
 
 .overview {
   &__title {
@@ -16,6 +18,12 @@
     width: 48%;
     margin-bottom: 20px;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__item {
+      width: 100%;
+    }
   }
 }
 
@@ -84,6 +92,12 @@
     margin-bottom: 20px;
     width: 48%;
   }
+
+  @media screen and (max-width: 768px) {
+    &__item {
+      width: 100%;
+    }
+  }
 }
 
 .steps {
@@ -95,78 +109,5 @@
 
   &__item {
     padding-bottom: 30px;
-  }
-}
-
-.step {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-
-  &__number {
-    width: 65px;
-    height: 65px;
-    margin-right: 20px;
-    border-radius: 50%;
-    border: 1px solid $purple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $purple;
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  &:after {
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: calc(100% - 85px);
-    top: 75px;
-    left: calc(65px / 2);
-    transform: translateX(-50%);
-    background-color: $purple;
-  }
-
-  &:last-child {
-    &:after {
-      display: none;
-    }
-  }
-
-  &__card {
-    width: calc(100% - 85px);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .overview {
-    &__item {
-      width: 100%;
-    }
-  }
-
-  .cards {
-    &__item {
-      width: 100%;
-    }
-  }
-
-  .step {
-    &__number {
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-    }
-
-    &__card {
-      width: calc(100% - 60px);
-    }
-
-    &:after {
-      height: calc(100% - 60px);
-      top: 50px;
-      left: calc(40px / 2);
-    }
   }
 }

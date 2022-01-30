@@ -1,0 +1,45 @@
+.spoiler {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #6353FF;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: $white;
+    width: calc(100% - 30px);
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: none;
+    margin-top: 10px;
+  }
+
+  &.active .spoiler {
+    &__content {
+      display: block;
+    }
+
+    &__arrow {
+      transform: rotate(180deg);
+    }
+  }
+}

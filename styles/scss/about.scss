@@ -55,10 +55,6 @@
 
   &__card {
     width: 48%;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
   }
 }
 
@@ -119,6 +115,10 @@
   .experience {
     &__card {
       width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
   }
 

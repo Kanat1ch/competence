@@ -1,0 +1,28 @@
+.submenu {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+
+  &__link {
+    margin: 0 15px;
+    font-size: 16px;
+    color: $gray;
+    text-decoration: none;
+    
+    &.active {
+      color: $lightpurple;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .submenu {
+    flex-direction: column;
+    
+    &__link {
+      margin: 5px 0;
+    }
+  }
+}

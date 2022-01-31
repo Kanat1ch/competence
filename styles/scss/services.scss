@@ -100,6 +100,40 @@
   }
 }
 
+.titled-cards {
+  margin-top: 40px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  .card__title {
+    color: $lightpurple;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 32%;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+}
+
+.col {
+  width: 32%;
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
 .steps {
   margin-top: 40px;
 

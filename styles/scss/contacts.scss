@@ -1,2 +1,15 @@
 @import './layout/layout';
 @import './components/contacts';
+@import './components/card';
+
+.cards {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .card {
+    width: 32%;
+    margin-right: 15px;
+  }
+}

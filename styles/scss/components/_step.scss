@@ -4,6 +4,7 @@
   justify-content: space-between;
 
   &__number {
+    position: relative;
     width: 65px;
     height: 65px;
     margin-right: 20px;
@@ -36,6 +37,22 @@
 
   &__card {
     width: calc(100% - 85px);
+  }
+
+  &--list.step {
+    .step__number {
+      &:after {
+        position: absolute;
+        content: '';
+        width: 30%;
+        height: 30%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: $purple;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {

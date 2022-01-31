@@ -4,9 +4,19 @@
   border: 1px solid $card-border-color;
   font-size: 16px;
 
+  &__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
   &--fill {
     border: none;
     background-color: $purple;
     color: #fff;
+  }
+
+  &--titled {
+    border: none;
+    background-color: #F7F7F7;
   }
 }

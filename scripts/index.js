@@ -35,7 +35,7 @@ overlay.addEventListener('click', closeMenu)
 
 // Popup
 const popup = document.querySelector('.popup')
-const popupBtn = document.querySelector('.header__contact-btn')
+const popupBtn = document.querySelectorAll('.order')
 const closePopupBtn = document.querySelector('.popup__close-btn')
 
 const openPopup = () => {
@@ -49,7 +49,11 @@ const closePopup = () => {
   setOverlay(false)
 }
 
-popupBtn.addEventListener('click', openPopup)
+if (popupBtn) {
+  popupBtn.forEach(btn => {
+    btn.addEventListener('click', openPopup)
+  })
+}
 closePopupBtn.addEventListener('click', closePopup)
 overlay.addEventListener('click', closePopup)
 

@@ -142,3 +142,23 @@
     }
   }
 }
+
+.images {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 32%;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

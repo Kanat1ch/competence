@@ -49,6 +49,19 @@ const closePopup = () => {
   setOverlay(false)
 }
 
+function showError(e) {
+  e.preventDefault();
+  alert('Заполните Google REcaptcha');
+}
+
+function onSubmitError() {
+  document.querySelector('.popup__form').addEventListener('submit', (e) => showError(e))
+}
+
+function onSubmit() {
+  document.querySelector('popup__form').removeEventListener('submit', showError)
+}
+
 if (popupBtn) {
   popupBtn.forEach(btn => {
     btn.addEventListener('click', openPopup)

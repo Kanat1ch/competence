@@ -21,7 +21,7 @@ require_once 'core/form.php';
         <label for="message">Ваше сообщение</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-      <div class="g-recaptcha" data-sitekey="6LdG4E8eAAAAAHWMp4nxfw_zM-dPB8dkmsVkIo_s"></div>
+      <div class="g-recaptcha" data-callback="onSubmit" data-error-callback="onSubmitError" data-sitekey="6LdG4E8eAAAAAHWMp4nxfw_zM-dPB8dkmsVkIo_s"></div>
       <button class="btn" name="submit" type="submit">Отправить</button>
     </form>
     <div class="popup__close-btn"><img src="./images/close.png" alt="close"></div>

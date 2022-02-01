@@ -27,11 +27,11 @@ require_once 'core/form.php';
     <div class="popup__close-btn"><img src="./images/close.png" alt="close"></div>
   </div>
   <?php 
-$error = "<script>
-document.querySelector('.popup__form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Заполните Google REcaptcha');
-});
-</script>";
-$_SESSION['error'] = $error;
+// $error = "<script>
+// document.querySelector('.popup__form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     alert('Заполните Google REcaptcha');
+// });
+// </script>";
+// $_SESSION['error'] = $error;
 ?>

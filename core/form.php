@@ -21,6 +21,6 @@ if (isset($_POST['submit'])) {
         $loc = $_SERVER['HTTP_REFERER'];
         header("location:$loc");
     }else{
-        echo $_SESSION['error'];
+        // echo $_SESSION['error'];
     }
 }

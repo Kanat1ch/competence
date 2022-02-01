@@ -1,3 +1,6 @@
+<?php 
+$a = "Оценка уязвимости объектов транспортной инфраструктуры и транспортных средств от актов незаконного вмешательства в сфере морского и речного транспорта";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,21 +17,21 @@
 <body class="loading">
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo logo" href="index.html">
+      <a class="header__logo logo" href="index.php">
         <img class="logo__image" src="./images/logo.png" alt="logo">
         <div class="logo__text">Компетенс</div>
       </a>
       <div class="header__content">
         <nav class="header__nav">
-          <a class="header__link" href="index.html">Главная</a>
-          <a class="header__link" href="about.html">О компании</a>
-          <a class="header__link active" href="services.html">Наши услуги</a>
-          <a class="header__link" href="contacts.html">Контакты</a>
+          <a class="header__link" href="index.php">Главная</a>
+          <a class="header__link" href="about.php">О компании</a>
+          <a class="header__link active" href="services.php">Наши услуги</a>
+          <a class="header__link" href="contacts.php">Контакты</a>
         </nav>
         <div class="header__contacts">
           <a class="header__tel" href="tel:+74996490449">+7 499 649 04 49</a>
           <a class="header__mail" href="mailto:info@compe10ce.ru">info@compe10ce.ru</a>
-          <button class="header__contact-btn">Задать вопрос</button>
+          <button class="header__contact-btn order">Задать вопрос</button>
         </div>
         <div class="close-btn"><img src="./images/close.png" alt="close"></div>
       </div>
@@ -36,16 +39,16 @@
     </div>
   </header>
   <div class="submenu">
-    <a href="services.html" class="submenu__link">Основная информация</a>
-    <a href="service.html" class="submenu__link active">Оценка уязвимости ТБ</a>
-    <a href="service.html" class="submenu__link">План обеспечения ТБ</a>
-    <a href="service.html" class="submenu__link">Аттестация ТБ</a>
+    <a href="services.php" class="submenu__link">Основная информация</a>
+    <a href="service.php" class="submenu__link active">Оценка уязвимости ТБ</a>
+    <a href="service.php" class="submenu__link">План обеспечения ТБ</a>
+    <a href="service.php" class="submenu__link">Аттестация ТБ</a>
   </div>
   <main>
     <div class="container banner__container">
       <div class="banner banner-right" id="banner">
         <div class="banner__content">
-          <h2 class="title banner__text">Оценка уязвимости объектов транспортной инфраструктуры и транспортных средств от актов незаконного вмешательства в сфере морского и речного транспорта</h2>
+          <h2 class="title banner__text"><?php echo $a; ?></h2>
           <div class="banner__btn btn btn-white order">Заказать</div>
         </div>
         <div class="banner__image">
@@ -78,56 +81,6 @@
           <div class="step__card card">Участки внутренних водных путей, а также обеспечивающие функционирование транспортного комплекса здания, сооружения, и помещения для обслуживания пассажиров и транспортных средств, погрузки, разгрузки и хранения грузов повышенной опасности и (или) опасных грузов, на перевозку которых требуется специальное разрешение, являющиеся объектами транспортной инфраструктуры, определяемые Правительством Российской Федерации в соответствии с Федеральным законом "О транспортной безопасности" и не отнесенные в соответствии с частью 5 статьи 6 Федерального закона "О транспортной безопасности" к объектам транспортной инфраструктуры, не подлежащим категорированию</div>
         </div>
       </div>
-    </div>
-
-    <div class="documents container">
-      <div class="documents__spoiler spoiler">
-        <div class="spoiler__header">
-          <div class="spoiler__title">В соответствии со статьей 6 Федерального закона от 09.02.2007 № 16-ФЗ "О транспортной безопасности"</div>
-          <div class="spoiler__arrow"><img src="./images/arrow.png" alt="arrow"></div>
-        </div>
-        <div class="spoiler__content">
-          <div class="card">Оценка уязвимости проводится в отношении объектов транспортной инфраструктуры и судов, в отношении которых применяются правила торгового мореплавания и требования в области охраны судов и портовых средств, установленные международными договорами Российской Федерации, а также судов ледокольного флота, используемых для проводки по морским путям.
-            <br><br>
-            Оценка уязвимости объектов транспортной инфраструктуры и судов, в отношении которых применяются правила торгового мореплавания и требования в области охраны судов и портовых средств, установленные международными договорами Российской Федерации, а также судов ледокольного флота, используемых для проводки по морским путям (далее - транспортные средства), осуществляется в целях определения степени их защищенности от угроз совершения актов незаконного вмешательства.
-            <br><br>
-            Оценка уязвимости объектов транспортной инфраструктуры проводится специализированными организациями в области обеспечения транспортной безопасности с учетом требований по обеспечению транспортной безопасности.
-            <br><br>
-            Оценка уязвимости транспортных средств проводится субъектами транспортной инфраструктуры либо специализированными организациями в области обеспечения транспортной безопасности с учетом требований по обеспечению транспортной безопасности.</div>
-        </div>
-      </div>
-
-      <div class="documents__spoiler spoiler">
-        <div class="spoiler__header">
-          <div class="spoiler__title">Постановлением Правительства Российской Федерации от 08.10.2020 № 1637</div>
-          <div class="spoiler__arrow"><img src="./images/arrow.png" alt="arrow"></div>
-        </div>
-        <div class="spoiler__content">
-          <div class="card">
-            Утверждены Требования по обеспечению транспортной безопасности, учитывающие уровни безопасности для транспортных средств морского и внутреннего водного транспорта.
-            <br><br>
-            В соответствии с постановлением Правительства Российской Федерации от 08.10.2020 № 1637 субъекты транспортной инфраструктуры (перевозчики) обязаны обеспечить в течение 3 месяцев с даты включения транспортного средства в реестр объектов транспортной инфраструктуры и транспортных средств проведение оценки уязвимости в отношении следующих транспортных средств (ТС):
-            <br><br>
-            <ul>
-              <li>судов, используемых в целях торгового мореплавания</li>
-              <li>судов ледокольного флота, используемых для проводки по морским путям</li>
-            </ul>   
-          </div>
-        </div>
-      </div>
-
-      <div class="documents__spoiler spoiler">
-        <div class="spoiler__header">
-          <div class="spoiler__title">Постановлением Правительства Российской Федерации от 08.10.2020 № 1638</div>
-          <div class="spoiler__arrow"><img src="./images/arrow.png" alt="arrow"></div>
-        </div>
-        <div class="spoiler__content">
-          <div class="card">Утверждены Требования по обеспечению транспортной безопасности, в том числе требования к антитеррористической защищенности объектов (территорий), учитывающих уровни безопасности для различных категорий объектов транспортной инфраструктуры морского и речного транспорта.
-            <br><br>
-            В соответствии с постановлением Правительства Российской Федерации от 08.10.2020 № 1638 субъекты транспортной инфраструктуры обязаны обеспечить в течение 3 месяцев с даты присвоения категории объекту транспортной инфраструктуры проведение оценки уязвимости.</div>
-        </div>
-      </div>
-
     </div>
 
     <div class="cards container">
@@ -198,6 +151,9 @@
       </div>
     </div>
   </main>
+<?php 
+  require_once 'form.php';
+  ?>
 <footer class="footer">© 2015 «Компетенс» ООО.</footer>
 <div class="overlay"></div>
 </body>

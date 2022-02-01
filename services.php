@@ -13,21 +13,21 @@
 <body class="loading">
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo logo" href="index.html">
+      <a class="header__logo logo" href="index.php">
         <img class="logo__image" src="./images/logo.png" alt="logo">
         <div class="logo__text">Компетенс</div>
       </a>
       <div class="header__content">
         <nav class="header__nav">
-          <a class="header__link" href="index.html">Главная</a>
-          <a class="header__link" href="about.html">О компании</a>
-          <a class="header__link active" href="services.html">Наши услуги</a>
-          <a class="header__link" href="contacts.html">Контакты</a>
+          <a class="header__link" href="index.php">Главная</a>
+          <a class="header__link" href="about.php">О компании</a>
+          <a class="header__link active" href="services.php">Наши услуги</a>
+          <a class="header__link" href="contacts.php">Контакты</a>
         </nav>
         <div class="header__contacts">
           <a class="header__tel" href="tel:+74996490449">+7 499 649 04 49</a>
           <a class="header__mail" href="mailto:info@compe10ce.ru">info@compe10ce.ru</a>
-          <button class="header__contact-btn">Задать вопрос</button>
+          <button class="header__contact-btn order">Задать вопрос</button>
         </div>
         <div class="close-btn"><img src="./images/close.png" alt="close"></div>
       </div>
@@ -35,28 +35,28 @@
     </div>
   </header>
   <div class="submenu">
-    <a href="services.html" class="submenu__link active">Основная информация</a>
-    <a href="service.html" class="submenu__link">Оценка уязвимости ТБ</a>
-    <a href="service.html" class="submenu__link">План обеспечения ТБ</a>
-    <a href="service.html" class="submenu__link">Аттестация ТБ</a>
+    <a href="services.php" class="submenu__link active">Основная информация</a>
+    <a href="service.php" class="submenu__link">Оценка уязвимости ТБ</a>
+    <a href="service.php" class="submenu__link">План обеспечения ТБ</a>
+    <a href="service.php" class="submenu__link">Аттестация ТБ</a>
   </div>
   <main>
     <div class="overview container">
       <h2 class="overview__title title">Наши услуги</h2>
       <div class="overview__items">
-        <a href="service.html" class="overview__item overview-item">
+        <a href="service.php" class="overview__item overview-item">
           <div class="overview-item__title">Аттестация сил обеспечения ТП</div>
           <div class="overview-item__image"><img src="./images/services/service-image.png" alt="image"></div>
         </a>
-        <a href="service.html" class="overview__item overview-item">
+        <a href="service.php" class="overview__item overview-item">
           <div class="overview-item__title">План обеспечения ТП ОТИ и ТС</div>
           <div class="overview-item__image"><img src="./images/services/service-image.png" alt="image"></div>
         </a>
-        <a href="service.html" class="overview__item overview-item">
+        <a href="service.php" class="overview__item overview-item">
           <div class="overview-item__title">Оценка уязвимости ОТИ и ТС</div>
           <div class="overview-item__image"><img src="./images/services/service-image.png" alt="image"></div>
         </a>
-        <a href="service.html" class="overview__item overview-item">
+        <a href="service.php" class="overview__item overview-item">
           <div class="overview-item__title">Какая-то четвертая услуга</div>
           <div class="overview-item__image"><img src="./images/services/service-image.png" alt="image"></div>
         </a>
@@ -157,6 +157,10 @@
       <div class="card">ООО "Компетенс" оказывает консалтинговые услуги в области обеспечения транспортной безопасности, Главы XI-2 МК СОЛАС-74 с поправками и Международного кодекса охраны судов и портовых средств.</div>
     </div>
   </main>
+<?php 
+  require_once 'form.php';
+  ?>
+  
 <footer class="footer">© 2015 «Компетенс» ООО.</footer>
 <div class="overlay"></div>
 </body>

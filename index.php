@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,16 +15,16 @@
 <body class="loading">
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo logo" href="index.html">
+      <a class="header__logo logo" href="index.php">
         <img class="logo__image" src="./images/logo.png" alt="logo">
         <div class="logo__text">Компетенс</div>
       </a>
       <div class="header__content">
         <nav class="header__nav">
-          <a class="header__link active" href="index.html">Главная</a>
-          <a class="header__link" href="about.html">О компании</a>
-          <a class="header__link" href="services.html">Наши услуги</a>
-          <a class="header__link" href="contacts.html">Контакты</a>
+          <a class="header__link active" href="index.php">Главная</a>
+          <a class="header__link" href="about.php">О компании</a>
+          <a class="header__link" href="services.php">Наши услуги</a>
+          <a class="header__link" href="contacts.php">Контакты</a>
         </nav>
         <div class="header__contacts">
           <a class="header__tel" href="tel:+74996490449">+7 499 649 04 49</a>
@@ -152,29 +153,9 @@
       </div>
     </section>
   </main>
-  <div class="popup">
-    <div class="popup__title">Свяжитесь с нами</div>
-    <form action="" class="popup__form">
-      <div class="form-item">
-        <label for="name">Имя</label>
-        <input id="name" name="name" type="text" required />
-      </div>
-      <div class="form-item">
-        <label for="email">Эл. почта</label>
-        <input id="email" name="email" type="email" required />
-      </div>
-      <div class="form-item">
-        <label for="phone">Телефон</label>
-        <input id="phone" name="phone" type="text" />
-      </div>
-      <div class="form-item">
-        <label for="message">Ваше сообщение</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      <button class="btn" type="submit">Отправить</button>
-    </form>
-    <div class="popup__close-btn"><img src="./images/close.png" alt="close"></div>
-  </div>
+<?php 
+  require_once 'form.php';
+  ?>
 <footer class="footer">© 2015 «Компетенс» ООО.</footer>
 <div class="overlay"></div>
 </body>

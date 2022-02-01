@@ -65,6 +65,11 @@
         </div>
       </div>
     </div>
+    <div class="images container">
+      <div class="images__item"><img src="./images/sert/sert.jpeg" alt="image"></div>
+      <div class="images__item"><img src="./images/sert/sert.jpeg" alt="image"></div>
+      <div class="images__item"><img src="./images/sert/sert.jpeg" alt="image"></div>
+    </div>
   </main>
 <?php 
   require_once 'form.php';

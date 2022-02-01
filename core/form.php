@@ -3,7 +3,6 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 include('database.php');
-session_start();
 if (isset($_POST['submit'])) {
     // var_dump($_POST);
     // echo $_POST['g-recaptcha-response'];
@@ -22,6 +21,6 @@ if (isset($_POST['submit'])) {
         $loc = $_SERVER['HTTP_REFERER'];
         header("location:$loc");
     }else{
-        echo "<script>console.log('vfdgfdgfgd');</script>";
+        echo $_SESSION['error'];
     }
 }

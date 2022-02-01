@@ -33,5 +33,5 @@ document.querySelector('.popup__form').addEventListener('submit', (e) => {
     alert('Заполните Google REcaptcha');
 });
 </script>";
-// $_SESSION['error'] = $error;
+$_SESSION['error'] = $error;
 ?>

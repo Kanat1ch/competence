@@ -10,7 +10,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заявки | Администратор ГПКиО</title>
+    <title>Заявки | Администратор</title>
     <link rel="stylesheet" href="styles/css/requests.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/4f5cd90764.js"></script>
@@ -56,6 +56,7 @@ session_start();
                     <div class="col col-2">Почта</div>
                     <div class="col col-2">Телефон</div>
                     <div class="col col-5">Сообщение</div>
+                    <div class="col col-5">Название услуги</div>
                     <a href="requestall_del.php" class="col col-6" title="Удалить все заявки"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 </li>
                 <?php
@@ -77,6 +78,7 @@ session_start();
                                 <div class="col col-2" data-label="Почта">'.$rows['mail'].'</div>
                                 <div class="col col-2" data-label="Телефон"><a href="tel:'.$rows['phone'].'">'.$rows['phone'].'</a></div>
                                 <div class="col col-5" data-label="Сообщение">'.$rows['message'].'</div>
+                                <div class="col col-5" data-label="Название услуги">'.$rows['s_name'].'</div>
                                 <div class="col col-6" data-label="Удаление"><a href="request_del.php?del_request='.$rows['id'].'"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>
                             </li>
                             ';

@@ -1,6 +1,10 @@
+<?php 
+session_start();
+require_once 'core/form.php';
+?>
 <div class="popup">
     <div class="popup__title">Свяжитесь с нами</div>
-    <form action="core/form.php" method="POST" class="popup__form">
+    <form method="POST" class="popup__form">
       <div class="form-item">
         <label for="name">Имя</label>
         <input id="name" name="name" type="text" required />
@@ -17,7 +21,17 @@
         <label for="message">Ваше сообщение</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
+      <div class="g-recaptcha" data-sitekey="6LdG4E8eAAAAAHWMp4nxfw_zM-dPB8dkmsVkIo_s"></div>
       <button class="btn" name="submit" type="submit">Отправить</button>
     </form>
     <div class="popup__close-btn"><img src="./images/close.png" alt="close"></div>
   </div>
+  <?php 
+$error = "<script>
+document.querySelector('.popup__form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Заполните Google REcaptcha');
+});
+</script>";
+// $_SESSION['error'] = $error;
+?>

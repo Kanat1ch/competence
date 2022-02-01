@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/css/index.min.css">
   <script src="./scripts/index.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
@@ -158,7 +159,7 @@
   </main>
 <?php 
   require_once 'form.php';
-  ?>
+?>
 <footer class="footer">© 2015 «Компетенс» ООО.</footer>
 <div class="overlay"></div>
 </body>

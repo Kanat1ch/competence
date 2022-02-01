@@ -3,6 +3,7 @@
 <?php
 include("../core/database.php");
 session_start();
+unset($_SESSION['title']);
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];

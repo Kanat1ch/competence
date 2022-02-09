@@ -60,6 +60,15 @@
 .experience {
   margin-top: 60px;
 
+  &__link{
+    text-decoration: none;
+    color: white;
+  }
+
+  &__link:hover{
+    text-decoration: underline;
+  }
+
   &__title {
     margin-bottom: 20px;
   }
@@ -72,6 +81,7 @@
 
   &__card {
     width: 48%;
+    margin-top: 30px;
   }
 
   @media screen and (max-width: 768px) {

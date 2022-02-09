@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/css/contacts.min.css">
   <script src="./scripts/index.js" defer></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="./scripts/tooltip.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <title>Компетенс — Контакты</title>
 </head>
 
@@ -25,7 +30,7 @@
           <a class="header__link active" href="contacts.php">Контакты</a>
         </nav>
         <div class="header__contacts">
-          <a class="header__tel" href="tel:+74996490449">+7 499 649 04 49</a>
+          <a class="header__tel" href="tel:+79852107774">+7 (985) 210 777 4</a>
           <a class="header__mail" href="mailto:info@compe10ce.ru">info@compe10ce.ru</a>
           <button class="header__contact-btn order">Задать вопрос</button>
         </div>
@@ -40,7 +45,8 @@
         <h2 class="title contacts__title">Контакты</h2>
         <div class="contacts__detail inline-info">
           <div class="inline-info__label">Телефон</div>
-          <a href="tel:+74996490449" class="inline-info__text">+7 499 649 04 49</a>
+          <a href="tel:+79852107774" class="inline-info__text">+7 (985) 210 777 4</a> &nbsp&nbsp&nbsp
+          <a href="tel:84992107774" class="inline-info__text">8 (499) 210 777 4</a>
         </div>
         <div class="contacts__detail inline-info">
           <div class="inline-info__label">Почта</div>
@@ -49,18 +55,18 @@
         <div class="contacts__detail inline-info">
           <div class="inline-info__label">Адрес</div>
           <div class="inline-info__text">Москва, Россия<br>
-            105187, улица Щербаковская,<br>
-            дом 53, корпус 3, офис 308</div>
+            125438, 2-й Лихачевский переулок, <br>
+            дом 1, строение 11</div>
         </div>
         <div class="contacts__detail inline-info show-map-btn">
           <div class="inline-info__label"></div>
           <div class="inline-info__text">
-            <a target="_blank" href="https://yandex.ru/maps/-/CCU5QCSI9A" class="contacts__btn btn">Показать на карте</a>
+            <a target="_blank" href="https://yandex.ru/maps/-/CCU5aYbl3A" class="contacts__btn btn">Показать на карте</a>
           </div>
         </div>
       </div>
       <div class="contacts__map">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A53baf9bc9931b104e8f56977b12f0ec659a28ab8db0e8e9f1833c348a93752a7&amp;source=constructor" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29d837d20baa36015cea75da52cdd770633382974f0314d5b994943388153430&amp;source=constructor" frameborder="0"></iframe>
       </div>
     </section>
   </main>

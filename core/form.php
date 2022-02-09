@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     // echo $_POST['g-recaptcha-response'];
     $captcha = $_POST['g-recaptcha-response'];
     if ($captcha) {
-        $a = $_SESSION['title'];
+        // $a = $_SESSION['title'];
         if (!$a) {
         $sql = "INSERT INTO request(name, mail, phone, message) VALUE('".$_POST['name']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['message']."')";
         mysqli_query($link, $sql);

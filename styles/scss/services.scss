@@ -81,6 +81,15 @@
     margin-bottom: 20px;
   }
 
+  &__link{
+    text-decoration: none;
+    color: black;
+  }
+
+  &__link:hover{
+    text-decoration: underline;
+  }
+
   &__items {
     display: flex;
     flex-wrap: wrap;

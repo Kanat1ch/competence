@@ -43,6 +43,11 @@ session_start();
             <div class="icon"><img src="img/icons/requests.png" alt="requests-icon"></div>
             <a href="requests.php">Заявки</a>
         </div>
+        <div class="navbar__item">
+            <div class="icon"><img src="img/icons/services.png" alt="requests-icon"></div>
+            <a href="services.php">Услуги</a>
+            <a href="service_add.php" class="add-new"><img src="img/icons/plus.png" alt="add-new"></a>
+        </div>
         <a href="index.php" class="logout">Выход</a>
 
     </nav>

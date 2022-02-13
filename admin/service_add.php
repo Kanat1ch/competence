@@ -14,14 +14,10 @@ else
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/css/dashboard.min.css">
+    <link rel="stylesheet" href="styles/css/post_add.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/script.js" defer></script>
-    <title>Главная | Администратор</title>
+    <title>Добавить услугу | Администратор</title>
 </head>
 <body>
     <header class="header">
@@ -41,7 +37,7 @@ else
     </header>
 
     <nav class="navbar">
-        <div class="navbar__item active">
+        <div class="navbar__item">
             <div class="icon"><img src="img/icons/home.png" alt="homepage-icon"></div>
             <a href="dashboard.php">Главная</a>
         </div>
@@ -49,16 +45,35 @@ else
             <div class="icon"><img src="img/icons/requests.png" alt="requests-icon"></div>
             <a href="requests.php">Заявки</a>
         </div>
-        <div class="navbar__item">
+        <div class="navbar__item active">
             <div class="icon"><img src="img/icons/services.png" alt="requests-icon"></div>
             <a href="services.php">Услуги</a>
-            <a href="service_add.php" class="add-new"><img src="img/icons/plus.png" alt="add-new"></a>
+            <a href="service_add.php" class="add-new"><img src="img/icons/plus_active.png" alt="add-new"></a>
         </div>
         <a href="index.php" class="logout">Выход</a>
-
     </nav>
 
-
+    <div class="container">
+        <div class="wrapper">
+            <form class="form" action='' method='post' enctype="multipart/form-data">
+                <div class="form__item">
+                    <label for="title">Заголовок</label>
+                    <input type="text" name="c_title" id="title" required>
+                </div>
+                <div class="form__item">
+                    <label for="background">Изображение на баннере</label>
+                    <input type="file" name="file" id="background"></input>
+                </div>
+                <div class="form__item submit">
+                    <input type="submit" name="submit" id="submit" value="Сохранить"></input>
+                </div>
+            </form>
+            <?php
+            echo $_SESSION['error'];
+            echo $_SESSION['success'];
+            ?>
+        </div>  
+    </div>
 </body>
 </html>
 <?php

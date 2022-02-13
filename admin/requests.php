@@ -54,6 +54,7 @@ session_start();
 
     <div class="container">
         <div class="wrapper">
+            <h1 class="page-title">Заявки</h1>
             <ul class="responsive-table">
                 <a href="#" class="delete-all">Удалить все заявки</a>
                 <li class="table-header">

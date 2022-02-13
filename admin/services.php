@@ -56,6 +56,7 @@ else
 
     <div class="container">
         <div class="wrapper">
+            <h1 class="page-title">Услуги</h1>
             <div class="posts">
                 <div class="posts__item">
                     <div class="image">

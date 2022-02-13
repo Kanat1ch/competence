@@ -55,6 +55,7 @@ else
 
     <div class="container">
         <div class="wrapper">
+            <h1 class="page-title">Добавление блока к услуге "Заголовок"</h1>
             <form class="form" action='' method='post' enctype="multipart/form-data">
                 <div class="form__item">
                     <label for="title">Заголовок</label>

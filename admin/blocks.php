@@ -18,7 +18,7 @@ else
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="scripts/script.js" defer></script>
     <script src="scripts/options.js" defer></script>
-    <title>Услуги | Администратор</title>
+    <title>Блоки | Администратор</title>
 </head>
 <body>
     <header class="header">
@@ -46,12 +46,12 @@ else
             <div class="icon"><img src="img/icons/requests.png" alt="requests-icon"></div>
             <a href="requests.php">Заявки</a>
         </div>
-        <div class="navbar__item active">
+        <div class="navbar__item">
             <div class="icon"><img src="img/icons/partners.png" alt="services-icon"></div>
             <a href="services.php">Услуги</a>
             <a href="service_add.php" class="add-new"><img src="img/icons/plus.png" alt="add-new"></a>
         </div>
-        <div class="navbar__item">
+        <div class="navbar__item active">
             <div class="icon"><img src="img/icons/services.png" alt="blocks-icon"></div>
             <a href="blocks.php">Блоки</a>
             <a href="block_add.php" class="add-new"><img src="img/icons/plus.png" alt="add-new"></a>
@@ -61,30 +61,26 @@ else
 
     <div class="container">
         <div class="wrapper">
-            <h1 class="page-title">Услуги</h1>
+            <h1 class="page-title">Блоки</h1>
             <div class="posts">
                 <div class="posts__item">
                     <div class="image">
                         <img src="img/logo.png" alt="image">
                     </div>
                     <div class="content">
-                        <a href="service_edit.php?service_id=<?=$service['id'];?>">Заголовок</a>
+                        <a href="service_edit.php?service_id=<?=$block['id'];?>">Заголовок</a>
                     </div>
                     <div class="options">
                         <img src="img/icons/options.png" alt="options">
                         <div class="click-handler">
                             <div class="options-list">
-                                <div class="option add-image">
-                                    <div class="icon"><img src="img/icons/plus.png" alt="icon"></div>
-                                    <a href="block_add.php">Добавить блок</a>
-                                </div>
                                 <div class="option edit">
                                     <div class="icon"><img src="img/icons/edit.png" alt="icon"></div>
-                                    <a href="service_edit.php?service_id=<?=$service['id'];?>">Редактировать</a>
+                                    <a href="block_edit.php?block_id=<?=$block['id'];?>">Редактировать</a>
                                 </div>
                                 <div class="option delete">
                                     <div class="icon"><img src="img/icons/delete.png" alt="icon"></div>
-                                    <a href="service_del.php?del_service=<?=$service['id'];?>">Удалить</a>
+                                    <a href="block_del.php?del_block=<?=$block['id'];?>">Удалить</a>
                                 </div>
                             </div>
                         </div>

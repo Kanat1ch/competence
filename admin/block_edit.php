@@ -16,8 +16,11 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/css/post_add.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="scripts/script.js" defer></script>
-    <title>Добавить блок | Администратор</title>
+    <script src="scripts/blocks.js" defer></script>
+    <title>Редактировать блок | Администратор</title>
 </head>
 <body>
     <header class="header">
@@ -53,18 +56,24 @@ else
         <div class="navbar__item active">
             <div class="icon"><img src="img/icons/services.png" alt="blocks-icon"></div>
             <a href="blocks.php">Блоки</a>
-            <a href="block_add.php" class="add-new"><img src="img/icons/plus_active.png" alt="add-new"></a>
+            <a href="block_add.php" class="add-new"><img src="img/icons/plus.png" alt="add-new"></a>
         </div>
         <a href="index.php" class="logout">Выход</a>
     </nav>
 
     <div class="container">
         <div class="wrapper">
-            <h1 class="page-title">Добавление блока к услуге "Заголовок"</h1>
+            <h1 class="page-title">Редактирование блока "Заголовок"</h1>
             <form class="form" action='' method='post' enctype="multipart/form-data">
                 <div class="form__item">
                     <label for="title">Заголовок</label>
-                    <input type="text" name="c_title" id="title" required>
+                    <div style="position: relative;">
+                      <input class="title-input" type="text" name="c_title" id="title" required>
+                      <div class="tooltip-container">
+                        <input class="tooltip-input title-tooltip-message" type="text" placeholder="Введите подсказку и выделите текст ниже" />
+                        <button class="tooltip-button title-add-tooltip" type="button">Добавить</button>
+                      </div>
+                    </div>
                 </div>
                 <div class="form__item">
                     <label>Тип блока</label>
@@ -92,9 +101,21 @@ else
                       </div> 
                     </div>
                 </div>
-                <div class="form__item submit">
-                    <input type="submit" name="submit" id="submit" value="Сохранить"></input>
+                <div class="form__item">
+                    <label>Элементы</label>
+                    <div class="elements">
+                      <!-- Render list -->
+                    </div>
                 </div>
+                <div class="form__footer">
+                    <div class="form__item">
+                        <button type="button" class="form__btn add-element">Добавить элемент</button>
+                    </div>
+                    <div class="form__item submit">
+                        <input type="submit" name="submit" id="submit" value="Сохранить"></input>
+                    </div>
+                </div>
+                
             </form>
             <?php
             echo $_SESSION['error'];
